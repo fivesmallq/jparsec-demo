@@ -1,0 +1,13 @@
+project {
+    crawler a
+    extractor b
+    generator a
+    adapter(a,b,c)
+}
+
+project {
+    crawler a
+    extractor b
+    generator a
+    adapter(a,b,c)
+}
