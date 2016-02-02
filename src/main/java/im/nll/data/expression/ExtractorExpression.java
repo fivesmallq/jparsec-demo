@@ -1,12 +1,12 @@
-package im.nll.data;
+package im.nll.data.expression;
 
 /**
  * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
  * @version Revision: 1.0
  * @date 16/2/2 下午2:24
  */
-public class GeneratorExpression extends Expression {
-    public GeneratorExpression(String name) {
+public class ExtractorExpression extends Expression{
+    public ExtractorExpression(String name) {
         this.name = name;
     }
 
@@ -23,9 +23,9 @@ public class GeneratorExpression extends Expression {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof GeneratorExpression)) return false;
+        if (!(o instanceof ExtractorExpression)) return false;
 
-        GeneratorExpression that = (GeneratorExpression) o;
+        ExtractorExpression that = (ExtractorExpression) o;
 
         return getName() != null ? getName().equals(that.getName()) : that.getName() == null;
 
@@ -38,6 +38,6 @@ public class GeneratorExpression extends Expression {
 
     @Override
     public String toString() {
-        return "GeneratorExpression{name='" + name + "'}";
+        return "ExtractorExpression{name='" + name + "'}";
     }
 }

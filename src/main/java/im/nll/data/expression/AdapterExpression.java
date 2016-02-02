@@ -1,4 +1,4 @@
-package im.nll.data;
+package im.nll.data.expression;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,31 +8,31 @@ import java.util.List;
  * @version Revision: 1.0
  * @date 16/2/2 下午2:24
  */
-public class WorkflowExpression extends Expression {
-    public WorkflowExpression(Expression... args) {
+public class AdapterExpression extends Expression {
+    public AdapterExpression(String... args) {
         this.args = args;
     }
 
-    public WorkflowExpression(List<Expression> args) {
-        this.args = args.stream().toArray(Expression[]::new);
+    public AdapterExpression(List<String> args) {
+        this.args = args.stream().toArray(String[]::new);
     }
 
-    private Expression[] args;
+    private String[] args;
 
-    public Expression[] getArgs() {
+    public String[] getArgs() {
         return args;
     }
 
-    public void setArgs(Expression[] args) {
+    public void setArgs(String[] args) {
         this.args = args;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof WorkflowExpression)) return false;
+        if (!(o instanceof AdapterExpression)) return false;
 
-        WorkflowExpression that = (WorkflowExpression) o;
+        AdapterExpression that = (AdapterExpression) o;
 
         // Probably incorrect - comparing Object[] arrays with Arrays.equals
         return Arrays.equals(getArgs(), that.getArgs());
@@ -46,6 +46,6 @@ public class WorkflowExpression extends Expression {
 
     @Override
     public String toString() {
-        return "WorkflowExpression{args='" + Arrays.toString(args) + "'}";
+        return "AdapterExpression{args='" + Arrays.toString(args) + "'}";
     }
 }

@@ -1,12 +1,12 @@
-package im.nll.data;
+package im.nll.data.expression;
 
 /**
  * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
  * @version Revision: 1.0
- * @date 16/2/2 下午2:51
+ * @date 16/2/2 下午2:24
  */
-public class CrawlerExpression extends Expression{
-    public CrawlerExpression(String name) {
+public class GeneratorExpression extends Expression {
+    public GeneratorExpression(String name) {
         this.name = name;
     }
 
@@ -23,9 +23,9 @@ public class CrawlerExpression extends Expression{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CrawlerExpression)) return false;
+        if (!(o instanceof GeneratorExpression)) return false;
 
-        CrawlerExpression that = (CrawlerExpression) o;
+        GeneratorExpression that = (GeneratorExpression) o;
 
         return getName() != null ? getName().equals(that.getName()) : that.getName() == null;
 
@@ -38,6 +38,6 @@ public class CrawlerExpression extends Expression{
 
     @Override
     public String toString() {
-        return "CrawlerExpression{name='" + name + "'}";
+        return "GeneratorExpression{name='" + name + "'}";
     }
 }

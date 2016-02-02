@@ -1,4 +1,4 @@
-package im.nll.data;
+package im.nll.data.expression;
 
 /**
  * @author <a href="mailto:fivesmallq@gmail.com">fivesmallq</a>
